@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>jquery.gettype by EleventyOne</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>jquery.gettype</h1>
+        <p>Quick method to help detect a variable&#39;s type</p>
+        <p class="view"><a href="https://github.com/EleventyOne/jquery.gettype">View the Project on GitHub <small>EleventyOne/jquery.gettype</small></a></p>
+        <ul>
+          <li><a href="https://github.com/EleventyOne/jquery.gettype/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/EleventyOne/jquery.gettype/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/EleventyOne/jquery.gettype">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+
+<p><a href="http://jquery.com/">http://jquery.com/</a></p>
+
+<h3>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h3>
+
+<p>$.gettype(obj)</p>
+
+<h3>
+<a id="returns" class="anchor" href="#returns" aria-hidden="true"><span class="octicon octicon-link"></span></a>Returns</h3>
+
+<p>Object.  </p>
+
+<ul>
+<li>
+<code>.base</code> is the basic Javascript type ("array","Date","object","NaN","null","number","string","undefined").</li>
+<li>
+<code>.extended</code> supports user-defined class types, through the <code>.__class_types[]</code> array (if present)</li>
+</ul>
+
+<h3>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example:</h3>
+
+<pre><code>&lt;script src='http://eleventyone.github.io/jquery.gettype/src/jquery.gettype.js'&gt;&lt;/script&gt;    
+var c = new MyClass({name:"EleventyOne",age:99,blob:null});
+console.log($.gettype(c));
+console.log($.gettype(c.name).base);
+console.log($.gettype(c.age).base);
+console.log($.gettype(c.blob).base);
+console.log($.gettype(c.superhero).base);
+
+// PRINTS:
+//
+// Object { base : "object", extended: "MyClass" }
+// string
+// number
+// null
+// undefined
+</code></pre>
+
+<h3>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h3>
+
+<p>Source of inspiration: <a href="http://stackoverflow.com/questions/7390426/better-way-to-get-type-of-a-javascript-variable/7390612#7390612">http://stackoverflow.com/questions/7390426/better-way-to-get-type-of-a-javascript-variable/7390612#7390612</a></p>
+
+<h3>
+<a id="source" class="anchor" href="#source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source</h3>
+
+<p>You can find the necessary files to include here:</p>
+
+<ul>
+<li><a href="http://eleventyone.github.io/jquery.gettype/src/jquery.gettype.js">http://eleventyone.github.io/jquery.gettype/src/jquery.gettype.js</a></li>
+<li><a href="http://eleventyone.github.io/jquery.gettype/src/jquery.gettype.min.js">http://eleventyone.github.io/jquery.gettype/src/jquery.gettype.min.js</a></li>
+</ul>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/EleventyOne">EleventyOne</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
